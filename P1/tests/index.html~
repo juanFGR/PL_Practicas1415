@@ -1,0 +1,61 @@
+<html>
+  <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>JavaScript Temperature Converter</title>
+      <!--link href="css/global.css" rel="stylesheet" type="text/css"-->
+
+    <link href="css/bootstrap.css" rel="stylesheet" media="screen">
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="js/mystylejs.js"></script>
+     <script type="text/javascript" src="js/temperature.js"></script>
+  <link rel="stylesheet" href="mocha.css" />    
+   
+
+<script src="mocha.js" type="text/javascript"></script>
+   <script src="chai.js" type="text/javascript"></script>  
+ <script>mocha.setup('bdd')</script>
+ <script>
+    function assert(expr, msg) {
+      if (!expr) throw new Error(msg || 'failed');
+    }
+  </script>
+  
+
+<script src="tests.js" type="text/javascript"></script>
+
+<script>
+    $(function() {
+      mocha.run();
+    })
+  </script>
+  </head>
+  
+  <header>
+ <div style="text-align:center">
+ <div style="width:100%;text-align:left;"><a href="../index.html" class="btn btn-primary">Back</a></div>
+	
+		<h1 id="title">Temperature Converter</h1>
+	</div>
+  </header>
+  
+  <body>
+
+  <div class="thumbnail" style="margin:auto;width: 340px;text-align:center;background-color:#999;">
+      
+	<th>Enter  Temperature (examples: 32F, 45C, -2.5f):</th>
+		<th><input id="original" class="form-control" type="text" placeholder="temperature" onchange="calculate();"></th>
+	<th>Converted Temperature:</th>
+        <td><span class="output" id="converted"></span></td>
+    </div>
+    
+      <div style="margin-top:50px" id="mocha"></div>
+
+   
+  </body>
+  
+ 
+  
+  
+  
+  
+</html>
